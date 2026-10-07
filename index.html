@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rana Maps</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-row">
+          <div class="brand-mark">R</div>
+          <div>
+            <h1>Rana Maps</h1>
+          </div>
+        </div>
+
+        <div class="search-panel">
+          <label for="searchInput">Search location</label>
+          <div class="search-row">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search city, restaurant, place..."
+            />
+            <button id="searchBtn">Search</button>
+          </div>
+          <div class="secondary-actions">
+            <button id="useMyLocationBtn" class="secondary-btn">Use my location</button>
+            <button id="saveLocationBtn" class="secondary-btn accent">Save location</button>
+          </div>
+        </div>
+
+        <div class="results-panel">
+          <h2>Search results</h2>
+          <div id="searchResults" class="result-list"></div>
+        </div>
+
+        <div class="saved-panel">
+          <h2>Saved locations</h2>
+          <div id="savedPlaces" class="saved-list"></div>
+        </div>
+      </aside>
+
+      <main class="map-area">
+        <div id="map"></div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

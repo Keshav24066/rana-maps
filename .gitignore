@@ -1,0 +1,23 @@
+# Rana Maps
+
+A lightweight map app built with Leaflet and OpenStreetMap.
+
+## Features
+- Current location detection
+- Search places and landmarks
+- Route drawing between your location and a destination
+- Save favorite places locally in the browser
+- Delete saved locations
+
+## Run locally
+1. Open `index.html` in a browser.
+2. Allow location access when prompted.
+3. Search for any place or click on saved locations.
+
+## Files
+- `index.html` - app layout
+- `styles.css` - UI styling
+- `script.js` - map, location, search, route, and saved places logic
+
+## Notes
+This is a simple browser-based prototype and does not require a backend or API key.
