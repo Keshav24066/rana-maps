@@ -3,16 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rana Maps</title>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
-    />
+    <title>Rana Maps Pro</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,25 +13,31 @@
       <aside class="sidebar">
         <div class="brand-row">
           <div class="brand-mark">R</div>
-          <div>
+          <div class="brand-text">
+            <span class="mini-tag">PRO</span>
             <h1>Rana Maps</h1>
           </div>
         </div>
 
         <div class="search-panel">
-          <label for="searchInput">Search location</label>
+          <label for="searchInput">Search place</label>
           <div class="search-row">
-            <input
-              id="searchInput"
-              type="text"
-              placeholder="Search city, restaurant, place..."
-            />
-            <button id="searchBtn">Search</button>
+            <input id="searchInput" type="text" placeholder="Try: Delhi, cafe, park, hospital" />
+            <button id="searchBtn">Go</button>
           </div>
+
           <div class="secondary-actions">
-            <button id="useMyLocationBtn" class="secondary-btn">Use my location</button>
-            <button id="saveLocationBtn" class="secondary-btn accent">Save location</button>
+            <button id="useMyLocationBtn" class="secondary-btn">My location</button>
+            <button id="saveLocationBtn" class="secondary-btn accent">Save</button>
           </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-header">
+            <span class="dot blue"></span>
+            <strong>Selected place</strong>
+          </div>
+          <div id="selectedPlaceInfo" class="info-body">No place selected</div>
         </div>
 
         <div class="results-panel">
@@ -47,12 +46,17 @@
         </div>
 
         <div class="saved-panel">
-          <h2>Saved locations</h2>
+          <h2>Saved places</h2>
           <div id="savedPlaces" class="saved-list"></div>
         </div>
       </aside>
 
       <main class="map-area">
+        <div class="map-toolbar">
+          <div class="toolbar-chip active">Map</div>
+          <div class="toolbar-chip">Nearby</div>
+          <div class="toolbar-chip">Saved</div>
+        </div>
         <div id="map"></div>
       </main>
     </div>
